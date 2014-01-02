@@ -60,9 +60,31 @@ var helper = {};
 helper.formatTime = function(){...};
 
 //template.html
-```html
-<p>
-${helper.formatTime(this.time)}
-</p>
-```
+<p>${helper.formatTime(this.time)}</p>
+
+</pre>
+
+The Controller
+--------------------------------
+
+Controllers are the glue between the inputs and the views. They recieve events from views, process them. Performing updates to the model when necessary and update views accordingly. 
+
+Controllers bind event listeners when the page loads. When an event is fired it will trigger actions inside the controller.
+
+<pre>
+
+var Controller = {};
+
+(Controller.paxManifest = function($){
+
+	var nameClick = function(){
+		/* ... */
+	}
+	
+	$(function(){
+		$('#view .name').on('click', nameClick);
+	});
+
+})(jQuery)
+
 </pre>
