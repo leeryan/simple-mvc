@@ -60,9 +60,9 @@ var helper = {};
 helper.formatTime = function(){...};
 
 //template.html
+```html
 <p>
 ${helper.formatTime(this.time)}
 </p>
-
-
+```
 </pre>
