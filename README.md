@@ -25,9 +25,10 @@ There are many frameworks that implement an MV* type approach to application arc
 The Model
 --------------------------------
 
-The model is where all the applications data is stored. These are stored in the form of JavaScript objects. 
+The model is where all the applications data is stored. They are stored in the form of JavaScript objects. 
 
 <pre>
+
 {
 	airline: 'Oceanic',
 	number: '815',
@@ -42,6 +43,26 @@ The model is where all the applications data is stored. These are stored in the 
 		city: Los Angeles
 	}
 }
+
+</pre>
+
+The model knows nothing about views or controllers. They should be completely decoupled from the rest of the application.
+
+The View
+--------------------------------
+
+The view is what is user presentation and interaction layer. Made up of HTML, CSS and JavaScript the view should contain absolutely no application logic. Presentational logic resides in helpers which are utility functions responsible for handling the view logic. 
+
+<pre>
+
+// helper.js
+var helper = {};
+helper.formatTime = function(){...};
+
+//template.html
+<p>
+${helper.formatTime(this.time)}
+</p>
 
 
 </pre>
