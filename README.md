@@ -6,7 +6,7 @@ An MVC 101 source to help you get started developing Javascript Web Applications
 What is MVC?
 --------------------------------
 
-MVC is a design pattern that breakS an application into three parts:
+MVC is a design pattern that breaks an application into three parts:
 
 1. The data (model).
 2. The presentation layer (view).
@@ -24,3 +24,24 @@ There are many frameworks that implement an MV* type approach to application arc
 
 The Model
 --------------------------------
+
+The model is where all the applications data is stored. These are stored in the form of JavaScript objects. 
+
+<pre>
+{
+	airline: 'Oceanic',
+	number: '815',
+	departure: {
+		IATA: 'SYD',
+		time: '2004-09-22 14:55',
+		city: 'Sydney'
+	},
+	arrival: {
+		IATA: 'LAX',
+		time: '2004-09-23 10:42',
+		city: Los Angeles
+	}
+}
+
+
+</pre>
